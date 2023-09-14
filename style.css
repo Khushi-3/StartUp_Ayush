@@ -108,41 +108,143 @@ nav-links{
     }
     
 }
+.h1{
+    font-size:  36px;
+    font-weight: 600;
+    align-items: center;
+    text-align: center;
+    font-weight: 200px;
+    padding-bottom: 10px;
+}
 
 /*---- Theme --------*/
 .theme{
-    width: 80%;
-    margin: auto;
+    /*
+    width: 100%;
     text-align: center;
     padding-top: 100px;
+    margin-top: 30px;
+    border: 5px solid brown;
+    */
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+   /* border: 5px solid brown; */
+    margin-left: 10px;
+    margin-right: 20px;
+    background-color:  rgb(173, 229, 135);
 }
 h1{
     font-size:  36px;
     font-weight: 600;
+    color:chocolate;
+
 }
-.themes ul{
-    margin: 50px;
-    padding: 20px;
-    font-size: 30px;
-    display: flex;
+.flex-container2 {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Vertically center items */
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex: 200px;
+    margin-bottom: 10px;
+} 
+.flex-container2 div{
+    border-style: solid;
+    border-color: black;
 }
-.themes ul li{
-    list-style-type: none;
-    font-size: 24px;
-    font-family: sans-serif;
-    line-height: 23px;
-    padding: 12px 20px;
-    width: 29%;
-    min-height: 70px;
-    border-width: 4px 4px 4px 2px;
-    border-top-style: solid;
-    border-right-style: solid;
-    border-bottom-style: solid;
-    border-left-style: solid;
-    border-top-color: brown;
-    border-right-color: brown;
-    border-bottom-color: brown;
-    border-left-color: brown;
+.innovation{
+   
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+}
+.innovation p{
+    color:brown;
+}
+.hardware{
+    font-size: 25px; 
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+
+}
+.hardware p{
+    color:brown;
+    font-size: 25px;
+}
+.software{
+    background-image: url();
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+}
+.software p{
+    color:brown;
+    font-size: 25px;
+}
+/* ABOUT US */
+.About{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    /*border: 5px solid brown; */
+    background-color: rgb(173, 229, 135);
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.flex-container1 {
+    margin-top: 0;
+    display: flex; /* Use flexbox */
+    align-items: center; /* Vertically center items */
+}
+.text {
+    flex: 1; /* Allow text to grow and take available space */
+    padding-top: 0;
+    /*padding: 10px;  Add spacing around the text */
+    font-size: 30px;
+}
+.h2{
+    font-size: 20px;
+}
+.About p{
+    padding-top: 0;
+}
+.image {
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    height: auto; 
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+/*PARTNERS*/
+.Partners{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 25%;
+}
+.flex-container3{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-color:2px solid black;
+}
+.item{
+    margin: left 40px;
+    padding-top: 5px;
+    margin: 5px;
     align-items: center;
+    border: 1px groove black;
+    padding-bottom: 5px;
+    text-align: center;
 }
