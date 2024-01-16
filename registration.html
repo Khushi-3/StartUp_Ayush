@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 21cm;
+            margin: auto;
+            padding: 2cm;
+            border: 20px solid navy;
+            background-color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5em;
+        }
+
+        .heading {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: calc(100% - 12px);
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 0.5em 1em;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        form {
+            max-width: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .image {
+            height: 200px;
+            width: 200px;
+        }
+
+        .form-group {
+            margin-bottom: 1em;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 0.5em 1em;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #image {
+            margin-top: 0px;
+            width: 60px;
+            ;
+            padding: 20px;
+            font-weight: 400;
+            padding-bottom: 1p;
+            height: 1px;
+            user-select: none;
+            text-decoration: line-through;
+            font-style: italic;
+            font-size: large;
+            border: navy 2px solid;
+            margin-left: 7px;
+
+        }
+
+        #user-input {
+            width: auto;
+            margin-right: 10px;
+            padding: 10px;
+            padding-bottom: 0px;
+            height: 40px;
+            border: navy 0px solid;
+        }
+
+        input {
+            border: 1px black solid;
+            top: 1px;
+            bottom: 10px;
+        }
+
+        .inline {
+            display: inline-block;
+            top: 1px;
+            bottom: 10px;
+        }
+
+        #btn {
+            color: navy;
+            margin: 10px;
+            background-color: #fff;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="captcha.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <script src="captcha.js"></script>
+
+</head>
+
+<body>
+    <form>
+        <div class="heading">
+
+            <img class="image" src="https://tennews.in/wp-content/uploads/2020/09/Ministry-of-AYUSH-logo.jpg"
+                alt="Logo">
+            <h1>Registration</h1>
+
+
+
+        </div>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" required placeholder="Enter your first name">
+            </div>
+            <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" required placeholder="Enter your last name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                <p style="font-size: x-small;">A valid e-mail address. All e-mails from the system will be sent to this
+                    address. The e-mail address is not made public and will only be used if you wish to receive a new
+                    password or wish to receive certain news or notifications by e-mail.</p>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <input type="radio" name="Mygender">Male<input type="radio" name="Mygender">Female<input type="radio"
+                    name="Mygender">Others
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                    <!-- Countries will be populated by JavaScript -->
+                    <option value="india" selected>India</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" required placeholder="Enter your state" required>
+            </div>
+            <div class="form-group">
+                <label for="pincode">Pincode</label>
+                <input type="number" id="pincode" name="pincode" required placeholder="Enter your pincode" required>
+            </div>
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <legend>Account Details</legend>
+            <div class="form-group">
+                <label for="userid">User ID</label>
+                <input type="text" id="userid" name="userid" required placeholder="Create your user ID">
+                <p style="font-size: x-small;">Spaces are allowed; punctuation is not allowed except for periods,
+                    hyphens, apostrophes, and underscores.</p>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Create your password">
+                <p style="font-size: x-small;">It should be least 12 characters long and a combination of uppercase
+                    letters, lowercase letters, numbers, and symbols.</p>
+            </div>
+            <div class="form-group">
+                <label for="password">Confirm Password</label>
+                <input type="password" id="password" name="password" required placeholder="Confirm your password">
+                <p style="font-size: x-small;"></p>
+            </div>
+        </fieldset>
+
+    </form>
+
+    <script>
+        document.getElementById('registerButton').addEventListener('click', function (event) {
+            document.getElementById('password').addEventListener('input', function () {
+                var password = this.value;
+                var confirmPassword = document.getElementById('confirmPassword').value;
+                var passwordError = document.getElementById('passwordError');
+
+                if (password !== confirmPassword) {
+                    passwordError.textContent = "Passwords do not match";
+                } else {
+                    passwordError.textContent = "Registration was successful";
+                }
+            });
+
+            document.getElementById('confirmPassword').addEventListener('input', function () {
+                var password = document.getElementById('password').value;
+                var confirmPassword = this.value;
+                var passwordError = document.getElementById('passwordError');
+
+                if (password !== confirmPassword) {
+                    passwordError.textContent = "Passwords do not match";
+                } else {
+                    passwordError.textContent = "Registration was successful";
+                }
+            });
+            event.preventDefault();
+            alert('Registration logic goes here');
+        });
+
+        document.getElementById('resetButton').addEventListener('click', function () {
+            // Reset the form fields here
+            document.getElementById('password').value = '';
+            document.getElementById('confirmPassword').value = '';
+        });
+    </script>
+
+    <script>
+        // JavaScript to populate the country dropdown
+        const countryDropdown = document.getElementById("country");
+
+        const countries = [
+            "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia",
+            "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium",
+            "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei",
+            "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic",
+            "Chad", "Chile", "China", "Colombia", "Comoros", "Congo, Democratic Republic of the", "Congo, Republic of the",
+            "Costa Rica", "Cote d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czechia", "Denmark", "Djibouti", "Dominica",
+            "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini",
+            "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada",
+            "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia",
+            "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati",
+            "Korea, North", "Korea, South", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia",
+            "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali",
+            "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia",
+            "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand",
+            "Nicaragua", "Niger", "Nigeria", "North Macedonia", "Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama",
+            "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda",
+            "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe",
+            "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands",
+            "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria",
+            "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia",
+            "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States",
+            "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
+        ];
+
+        countries.forEach((country) => {
+            const option = document.createElement("option");
+            option.value = country;
+            option.text = country;
+            countryDropdown.appendChild(option);
+        });
+        let captcha;
+        function generate() {
+
+            // Clear old input
+            document.getElementById("submit").value = "";
+
+            // Access the element to store
+            // the generated captcha
+            captcha = document.getElementById("image");
+            let uniquechar = "";
+
+            const randomchar =
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            // Generate captcha for length of
+            // 5 with random character
+            for (let i = 1; i < 5; i++) {
+                uniquechar += randomchar.charAt(
+                    Math.random() * randomchar.length)
+            }
+
+            // Store generated input
+            captcha.innerHTML = uniquechar;
+        }
+
+        function printmsg() {
+            const usr_input = document
+                .getElementById("submit").value;
+
+            // Check whether the input is equal
+            // to generated captcha or not
+            if (usr_input == captcha.innerHTML) {
+                let s = document.getElementById("key")
+                    .innerHTML = "Matched";
+                generate();
+            }
+            else {
+                let s = document.getElementById("key")
+                    .innerHTML = "not Matched";
+                generate();
+            }
+        }
+
+    </script>
+    <div onload="generate()">
+        <div id="user-input" class="inline">
+            <input type="text" id="submit" placeholder="Captcha code" />
+        </div>
+
+        <div class="inline" onclick="generate()">
+            <i class="fas fa-sync"></i>
+        </div>
+
+        <div id="image" class="inline" selectable="False">
+        </div>
+        <input type="submit" id="btn" onclick="printmsg()" />
+
+        <p id="key"></p>
+    </div>
+    <button type="submi t">Register</button> &nbsp; &nbsp; &nbsp; &nbsp;
+    <button type="submit" onclick="move_forward()">Reset</button>
+
+</body>     
+
+</html>

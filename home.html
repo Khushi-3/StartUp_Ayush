@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AYUSH PORTAL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <style>
+        .registration {
+            padding-left: 86%;
+        }
+        
+        
+        /* End of Chatbot Pop-up CSS */
+        
+        .theme-light {
+          --color-primary: #0060df;
+          --color-secondary: #fbfbfe;
+          --color-accent: #fd6f53;
+          --font-color: #000000;
+        }
+        .theme-dark {
+          --color-primary: #17ed90;
+          --color-secondary: #2a2c2d;
+          --color-accent: #12cdea;
+          --font-color: #ffffff;
+        }
+        .container {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          background: var(--color-secondary);
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        .container button {
+          color: var(--font-color);
+          background: var(--color-primary);
+          padding: 10px 20px;
+          border: 0;
+          border-radius: 5px;
+        }
+        
+        /* The switch - the box around the slider */
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+        }
+        
+        /* Hide default HTML checkbox */
+        .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+        
+        /* The slider */
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+        }
+        
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 40px;
+          width: 40px;
+          left: 0px;
+          bottom: 4px;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+          box-shadow: 0 0px 15px #2020203d;
+          background: white url('https://i.ibb.co/FxzBYR9/night.png');
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        
+        input:checked + .slider {
+          background-color: #2196f3;
+        }
+        
+        input:focus + .slider {
+          box-shadow: 0 0 1px #2196f3;
+        }
+        
+        input:checked + .slider:before {
+          -webkit-transform: translateX(24px);
+          -ms-transform: translateX(24px);
+          transform: translateX(24px);
+          background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        
+        /* Rounded sliders */
+        .slider.round {
+          border-radius: 34px;
+        }
+        
+        .slider.round:before {
+          border-radius: 50%;
+        }
+        
+        #logoid1 {
+           
+            margin-left: 55%;
+            height: 90px;
+        
+            width: 100px;
+        }
+        .name{
+            
+            margin-right: 98%;
+            text-align: left;
+        }
+        .border {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            text-align: right;
+            margin-left: 0%;
+           
+        }
+        .services{
+          text-align: center;
+        }
+        /* h3{
+            margin-right: 15%;
+        } */
+        
+        .img1{
+           height: 90px;
+           width: 200px;
+        }
+        
+        
+        .flag {
+            position: relative;
+            width: 5700px;
+            height: 55px;
+        }
+        
+        .img {
+            width: 1365px;
+        
+        }
+        #header ,#services,.SER,#schemes{
+            background-image: url("https://img.freepik.com/free-vector/independence-day-celebration-indian-flag-theme-texture-background_1035-27317.jpg");
+            background-size:cover ;
+            background-repeat: no-repeat;
+          }
+        /* Navbar background color and text color */
+        .navbar {
+            background-color: rgb(255, 106, 0);
+            color: #000000;
+        }
+        
+        /* Navbar links */
+        .navbar a.nav-link {
+            color: #000000 !important;
+            font-weight: bold;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+        }
+        
+        /* Hover effect - Change background color on hover */
+        .navbar a.nav-link:hover {
+            background-color: #ff7b00;
+            border-radius: 3px;
+        }
+        
+        /* PEN STYLES */  
+        
+        * {
+            box-sizing: border-box;
+          }
+          
+          /* body {
+            background: #f1f1f1;
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+          } */
+          
+          /* Define your color variables if needed */
+          .color_white {
+            color: #fff;
+          }
+          .color_prime {
+            color: #5ad67d;
+          }
+          .color_grey {
+            color: #e2e2e2;
+          }
+          .color_grey_dark {
+            color: #a2a2a2;
+          }
+          
+          .blog-card {
+            display: flex;
+            flex-direction: column;
+            margin: 1rem auto;
+            box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.6%;
+            background: #fff; /* Use the color variable here if needed */
+            line-height: 1.4;
+            font-family: sans-serif;
+            border-radius: 5px;
+            overflow: hidden;
+            z-index: 0;
+          }
+          
+          .blog-card a {
+            color: inherit;
+          }
+          
+          .blog-card a:hover {
+            color: #5ad67d; /* Use the color variable here if needed */
+          }
+          
+          .blog-card:hover .photo {
+            transform: scale(1.3) rotate(3deg);
+          }
+          
+          .blog-card .meta {
+            position: relative;
+            z-index: 0;
+            height: 200px;
+          }
+          
+          .blog-card .photo {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.2s;
+          }
+          
+          .blog-card .details,
+          .blog-card .details ul {
+            margin: auto;
+            padding: 0;
+            list-style: none;
+          }
+          
+          .blog-card .details {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -100%;
+            margin: auto;
+            transition: left 0.2s;
+            
+
+            color: #fff; /* Use the color variable here if needed */
+            padding: 10px;
+            width: 100%;
+            font-size: 0.9rem;
+          }
+          
+          .blog-card .details a {
+            text-decoration: dotted underline;
+          }
+          
+          .blog-card .details ul li {
+            display: inline-block;
+          }
+          
+          .blog-card .details .author:before {
+            font-family: FontAwesome;
+            margin-right: 10px;
+            content: "\f007";
+          }
+          
+          .blog-card .details .date:before {
+            font-family: FontAwesome;
+            margin-right: 10px;
+            content: "\f133";
+          }
+          
+          .blog-card .details .tags ul:before {
+            font-family: FontAwesome;
+            content: "\f02b";
+            margin-right: 10px;
+          }
+          
+          .blog-card .details .tags li {
+            margin-right: 2px;
+          }
+          
+          .blog-card .details .tags li:first-child {
+            margin-left: -4px;
+          }
+          
+          .blog-card .description {
+            padding: 1rem;
+            background: #fff; /* Use the color variable here if needed */
+            position: relative;
+            z-index: 1;
+          }
+          
+          .blog-card .description h1,
+          .blog-card .description h2 {
+            font-family: Poppins, sans-serif;
+          }
+          
+          .blog-card .description h1 {
+            line-height: 1;
+            margin: 0;
+            font-size: 1.7rem;
+          }
+          
+          .blog-card .description h2 {
+            font-size: 1rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: #a2a2a2; /* Use the color variable here if needed */
+            margin-top: 5px;
+          }
+          
+          .blog-card .description .read-more {
+            text-align: right;
+          }
+          
+          .blog-card .description .read-more a {
+            color: #5ad67d; /* Use the color variable here if needed */
+            display: inline-block;
+            position: relative;
+          }
+          
+          .blog-card .description .read-more a:after {
+            content: "\f061";
+            font-family: FontAwesome;
+            margin-left: -10px;
+            opacity: 0;
+            vertical-align: middle;
+            transition: margin 0.3s, opacity 0.3s;
+          }
+          
+          .blog-card .description .read-more a:hover:after {
+            margin-left: 5px;
+            opacity: 1;
+          }
+          
+          .blog-card p {
+            position: relative;
+            margin: 1rem 0 0;
+          }
+          
+          .blog-card p:first-of-type {
+            margin-top: 1.25rem;
+          }
+          
+          .blog-card p:first-of-type:before {
+            content: "";
+            position: absolute;
+            height: 5px;
+            background: #5ad67d; /* Use the color variable here if needed */
+            width: 35px;
+            top: -0.75rem;
+            border-radius: 3px;
+          }
+          
+          .blog-card:hover .details {
+            left: 0%;
+          }
+          
+          @media (min-width: 640px) {
+            .blog-card {
+              flex-direction: row;
+              max-width: 700px;
+            }
+          
+            .blog-card .meta {
+              flex-basis: 40%;
+              height: auto;
+            }
+          
+            .blog-card .description {
+              flex-basis: 60%;
+            }
+          
+            .blog-card.alt {
+              flex-direction: row-reverse;
+            }
+          
+            .blog-card.alt .description:before {
+              left: inherit;
+              right: -10px;
+              transform: skew(3deg);
+            }
+          
+            .blog-card.alt .details {
+              padding-left: 25px;
+            }
+          }
+          #services {
+            display: flex;
+            flex-direction: column-reverse; /* Reverse the order of cards */
+            background-color: lightblue;
+        }
+        
+        .blog-card {
+            /* Add your card styles here */
+            margin: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .left{
+            margin-left: 53%;
+        }/* CSS for the Contact Form */
+        
+        /* Container styles */
+        .content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px;
+          border: 10px;
+          background-color: rgb(255, 98, 0);
+          
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Left side styles */
+        .left-side {
+          flex: 1;
+          text-align: center;
+        }
+        
+        #logoid {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-bottom: 10px;
+        }
+        
+        h3 {
+          font-size: 20px;
+          margin: 5px 0;
+        }
+        
+        .details {
+          margin-top: 20px;
+        }
+        
+        .details i {
+          color: #007BFF;
+          font-size: 20px;
+          margin-right: 5px;
+        }
+        
+        .topic {
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+        
+        .text-one {
+          color: #333;
+          margin-bottom: 5px;
+        }
+        
+        .text-two {
+          color: #777;
+          margin-bottom: 5px;
+          
+        }
+        
+        /* Right side styles */
+        .right-side {
+          flex: 1;
+        }
+        
+        .topic-text {
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 20px;
+          color: black;
+        }
+        
+        p {
+          font-size: 16px;
+          line-height: 1.5;
+          margin-bottom: 20px;
+          color: #333;
+        }
+        
+        form {
+          display: grid;
+          grid-gap: 10px;
+        }
+        
+        .input-box input,
+        .input-box textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          outline: none;
+        }
+        
+        .input-box textarea {
+          height: 100px;
+        }
+        
+        .button input[type="button"] {
+          background-color: #007BFF;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+        }
+        
+        .button input[type="button"]:hover {
+          background-color: #0056b3;
+        }
+        
+        
+        .left-side,
+        .right-side {
+          padding: 20px;
+        }
+        
+        .address,
+        .phone,
+        .email {
+          margin-bottom: 20px;
+        }
+        
+        .details {
+          display: flex;
+          align-items: center;
+        }
+        
+        .details i {
+          margin-right: 10px;
+          font-size: 24px;
+          color: #333;
+        }
+        
+        .topic {
+          font-weight: bold;
+          font-size: 18px;
+          margin-bottom: 5px;
+          color: #333;
+        }
+        
+        #logoid {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          object-fit: contain; /* Use "contain" to fit the image within the container */
+          display: block; /* Center the image horizontally */
+          margin: 0 auto; /* Center the image horizontally */
+          margin-bottom: 10px;
+        }
+        .socials{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0 3rem 0;
+        }
+        .socials li{
+            margin: 0 10px;
+        }
+        .socials a{
+            text-decoration: none;
+            color: #fff;
+            border: 1.1px solid white;
+            padding: 5px;
+            border-radius: 50%;
+        }
+        .socials a i{
+            font-size: 1.1rem;
+            width: 20px;
+            transition: color .4s ease;
+        }
+        .socials a:hover i{
+            color: aqua;
+        }
+        .fa {
+          padding: 20px;
+          font-size: 30px;
+          width: 30px;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 50%;
+          
+        }
+        .zoom-buttons {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          display: block;
+          padding: 10px 10px;
+          margin-bottom: 10px;
+          background-color: lightsalmon;
+          color:lightsalmon;
+          border:#000000;
+          border-radius: 2px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+        
+        }
+        #scheme{
+          background-image: url();
+        }
+        /* cards schemes */
+        @import url(https://fonts.googleapis.com/css?family=Varela+Round);
+        
+        /* Colors */
+        :root {
+          --color-one: #1F2124;
+          --color-two: #383A3F;
+          --color-three: #F68657;
+          --color-four: #F6B352;
+        }
+        
+        *, *::before, *::after {
+          box-sizing: border-box;
+        }
+        
+        body {
+          background: var(--color-two);
+          font-family: "Varela Round", sans-serif;
+        }
+        
+        .card {
+          background: var(--color-one);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+          border-radius: 5px;
+          margin: 50px 20px 20px 20px;
+          width: calc(33.3333% - 40px); /* 1/3 minus the margins (20+20) */
+          padding: 20px;
+          text-align: center;
+          color: white;
+          float: left;
+        }
+        
+        @media (max-width: 768px) {
+          .card {
+            margin: 10px 20px;
+            width: calc(100% - 40px);
+          }
+          .card:first-child {
+            margin-top: 20px;
+          }
+        }
+        
+        .card:nth-child(2) {
+          margin: 20px 0;
+          width: 33.3333%;
+          padding: 50px 20px;
+        }
+        
+        @media (max-width: 768px) {
+          .card:nth-child(2) {
+            margin: 10px 20px;
+            width: calc(100% - 40px);
+          }
+        }
+        
+        .card .title {
+          font-size: 25px;
+        }
+        
+        .card .icon {
+          margin: 50px 0;
+        }
+        
+        .card .icon svg {
+          width: 100px;
+          height: 100px;
+        }
+        
+        .card .icon svg path {
+          fill: var(--color-four);
+        }
+        
+        .card .features ul {
+          padding: 0;
+          margin: 20px 0 50px 0;
+          list-style-type: none;
+        }
+        
+        .card .features ul li {
+          margin: 10px 0;
+          font-size: 14px;
+        }
+        
+        .card .features ul li span {
+          border-bottom: 2px dotted var(--color-four);
+        }
+        
+        .card .btn {
+          display: block;
+          background: var(--color-four);
+          color: white;
+          padding: 15px 20px;
+          margin: 20px 0;
+          border-radius: 5px;
+          
+          transition: all 200ms ease-in-out;
+          text-decoration: none;
+        }
+        
+        .card .btn:hover {
+          background: var(--color-three);
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div id="header" style="display: flex;">
+        <div class="zoom-buttons">
+            <button onclick="zoomIn()">A+</button>
+            <button onclick="zoomOut()">A-</button>
+        </div>
+
+        <div style="flex: 20%;">
+            <a href="https://www.india.gov.in/"> <img class="img1" src="2.png" alt="not found"></a>
+
+        </div>
+        <div class="NAME" style="flex: 20%;margin-right: 5%;">
+
+            <img id="logoid" src="logooo.png" alt="not found">
+
+        </div>
+        <div class="NAME" style="flex: 60%;">
+            <h3>आयुष मंत्रालय</h3>
+            <h3>MINISTRY OF AYUSH</h3>
+
+
+        </div>
+    </div>
+    </div>
+    </div>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a id="ayushlogo" href="https://www.g20.org/en/g20-india-2023/new-delhi-summit/" target="_blank">
+                <img id="logoid" src="1.jpg" alt="">
+            </a>
+            <h4 style=" opacity: 10; ;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </h4>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="ayush portal.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Startups</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#schemes">Schemes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="media">Media Corner</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Contacts Us</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner ">
+            <div class="carousel-item active">
+                <img src="p4.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item ">
+                <img src="p2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="p1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="p3.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="p5.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+    <BR>
+
+    <div class="SER">
+        <h1 class="services">SERVICES</h1>
+    </div>
+    <div id="services">
+        <div style="display: flex;">
+            <div style="flex: 50%;">
+                <div class="blog-card">
+                    <div class="meta">
+                        <div class="photo"
+                            style="background-image: url(https://ayush.jharkhand.gov.in/images/division/0.82298200%201649404903sowa%20rigpa%20png.png)">
+                        </div>
+
+                    </div>
+                    <div class="description">
+                        <h1>SOWA RIGPA</h1>
+                        <h2>THE TIBETAN BOOK OF HEALTH</h2>
+                        <p>Sowa-Rigpa” is the traditional medicine of many parts of the Himalayan region used mainly by
+                            the
+                            Tribal and bhot people. Sowa-Rigpa(Bodh-Kyi) means 'science of healing' and the
+                            practitioners of
+                            this medicine are known as Amchi. </p>
+                        <p class="read-more">
+                            <a href="#">Read More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div style="flex:50%;">
+                <div class="blog-card ">
+                    <div class="meta">
+                        <div class="photo"
+                            style="background-image: url(https://media.istockphoto.com/id/466628811/photo/alternative-medicine.jpg?s=612x612&w=0&k=20&c=xGUFtYeRC8SuOPLkt9XxmKN85RlMkqDy7toQJWt1YEM=)">
+                        </div>
+
+                    </div>
+                    <div class="description">
+                        <h1>HOMEOPATHY</h1>
+                        <h2>THE ORGANON OF THE HEALING ART</h2>
+                        <p>'Homoeopathy' was introduced as a scientific system of drug therapeutics by a German Physician, Dr. Christian Frederick Samuel Hahnemann in 1805. The principle of Homoeopathy is Similia Similibus Curentur. </p>
+                        <p class="read-more">
+                            <a href="#">Read More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display:flex">
+            <div style="flex: 50%;">
+                <div class="blog-card">
+                    <div class="meta">
+                        <div class="photo"
+                            style="background-image: url(https://www.khokardispensary.com/healthtips/wp-content/uploads/2018/03/Unani-Medicine-for-Impotence-800x413.jpg)">
+                        </div>
+
+                    </div>
+                    <div class="description">
+                        <h1>UNANI</h1>
+                        <h2>THE SCIENCE OF GRAECO-ARABIC MEDICINE</h2>
+                        <p>Unani System of medicine is a comprehensive medical system, which provides preventive, promotive, curative and rehabilitative health care. The system is holistic in nature and takes into account the whole personality of an individual. </p>
+                        <p class="read-more">
+                            <a href="#">Read More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div style="flex:50%">
+                <div class="blog-card ">
+                    <div class="meta">
+                        <div class="photo"
+                            style="background-image: url(https://www.medicotripindia.com/assets/img/Siddha.jpg)">
+                        </div>
+
+                    </div>
+                    <div class="description">
+                        <h1>SIDDHA</h1>
+                        <h2>A HANDBOOK OF TRADITIONAL REMEDIES</h2>
+                        <p>The Siddha system is ancient system of medicine in India. The word 'Siddha' is derived from
+                            the
+                            root word 'Citti" meaning attainement of perfection, eternal bliss and accomplishment.Siddha is the mother medicine of ancien peninsular South India </p>
+                        <p class="read-more">
+                            <a href="#">Read More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex;">
+            <div style="flex: 50%;">
+                <div class="blog-card">
+                    <div class="meta">
+                        <div class="photo"
+                            style="background-image: url(https://rishihood.edu.in/wp-content/uploads/2021/11/16-1.png)">
+                        </div>
+
+                    </div>
+                    <div class="description">
+                        <h1>Ayurveda</h1>
+                        <h2>An Ancient Indian System of Medicine</h2>
+                        <p>Ayurveda involves ancient practices from India to heal and prevent disease while keeping the
+                            body
+                            and
+                            spirit in harmony.The term 'Ayurveda' meaning 'the knowledge of life' comprises of two Sanskrit words viz 'Ayu' meaning 'Life' and 'Veda'.</p>
+                        <p class="read-more">
+                            <a href="#">Read More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 50%;">
+                <div class="blog-card ">
+                    <div class="meta">
+                        <div class="photo"
+                            style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS521XgfrOJ7wDwZV8lrDq_OQi_RwtU3yXIlARW1wwcXthBhRtVGYy8zlsLn3qBIzygXY4&usqp=CAU)">
+                        </div>
+
+                    </div>
+                    <div class="description">
+                        <h1>YOGA AND NATUROPATHY</h1>
+                        <h2>SUTRAS OF PATANJALI</h2>
+                        <p>The word 'Yoga' comes from the Sanskrit word 'yuj' which means 'to unite or integrates'.Yoga is about the union of a person's own conciousness and the universal consciousness.
+                            Naturopathy is a holistic approach to wellness. </p>
+                        <p class="read-more">
+                            <a href="#">Read More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <BR>
+        <BR>
+    <div id="schemes">
+        <h1 style="text-align: center;">SCHEMES</h1>
+    </div>
+    <div style="display: flex; ">
+        <div class="card" style="width: 300px;flex: 33%;">
+            <div class="card-body">
+                <h5 class="card-title">AYURGYAN</h5>
+                <p class="card-text" style="color: WHITE;">AYURGYAN Scheme has been approved for the period from FY 2021-2022 to FY 2025-2026
+                    for promoting education and research in the field of Ayush and to support Research & Innovation in
+                    Ayush by extra mural research and education in Ayush by providing academic activities, training,
+                    Capacity Building etc.</p><br><br>
+                <a href="https://ngo.ayush.gov.in/" class="btn btn-primary">Apply here</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 300px;flex: 33%;">
+            <div class="card-body">
+                <h5 class="card-title">AYURSWASTHYA</h5>
+                <p class="card-text" style="color: WHITE;" >Under the Centre of Excellence component of AYURSWASTHYA Yojana, financial
+                    assistance is provided to eligible individual organizations/institutes for establishing and
+                    upgrading their functions & facilities and/or for research & development activities in Ayush.</p>
+                <br><br><br>
+                <a href="https://ngo.ayush.gov.in/" class="btn btn-primary">Apply here</a>
+            </div>
+        </div>
+        <div class="card" style="width: 300px;flex:33%">
+            <div class="card-body">
+                <h5 class="card-title" >CHAMPION SERVICES SECTOR SCHEMES</h5>
+                <p class="card-text" style="color: WHITE;"  >The Champion Services Sector Scheme have been framed by Govt. of India to enhance
+                    Medical tourism in the country.The initiative will not only promote and propage Ayurveda, Yoga and
+                    other traditional systems of medicines but also expect to increase foot fall of International
+                    patients/tourists/visitors in the country.</p><br>
+                <a href="https://ngo.ayush.gov.in/" class="btn btn-primary">Apply here</a>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <div class="card" style="width: 300px;flex:33%">
+            <div class="card-body">
+                <h5 class="card-title">PROMOTION OF INTERNATIONAL CO-OPERATION</h5>
+                <p class="card-text" style="color: WHITE;" >Central Sector Scheme for Promotion of International Co-operation (IC) in Ayush. To
+                    promote and strengthen awareness and interest about Ayush Systems of Medicine and to facilitate
+                    International promotion, development and recognition of Ayurveda, Yoga, Naturopathy, Unani, Siddha,
+                    Sowa-Rigpa and Homoeopathy.</p><br><br>
+                <a href="https://ngo.ayush.gov.in/" class="btn btn-primary">Apply here</a>
+            </div>
+        </div>
+        <div class="card" style="width: 300px;flex:33%">
+            <div class="card-body">
+                <h5 class="card-title">INFORMATION, EDUCATION & COMMUNICATION</h5>
+                <p class="card-text" style="color: WHITE;" >Pursue activities in the areas of Information, Education and Communication to
+                    fulfill
+                    the mandate of „propagation” of Ayush‟ Systems of Healthcare, assigned to the Ministry in the
+                    Government
+                    of India (Allocation of Business) Rules 1961.</p><br><br><br><br>
+                <a href="https://ngo.ayush.gov.in/" class="btn btn-primary">Apply here</a>
+            </div>
+        </div>
+        <div class="card" style="width: 300px;flex:33%">
+            <div class="card-body">
+                <h5 class="card-title">AYUSH OUSHADHI GUNVATHA EVUM AUTHPADAN</h5>
+                <p class="card-text" style="color: WHITE;" >Regulation of Ayurveda, Siddha, Unani and Homoeopathic (ASU&H) medicines in India,
+                    are
+                    governed under the provisions of Drugs & Cosmetics Act, 1940 and the Rules made thereunder. The
+                    growth &
+                    development of traditional Indian and Homoeopathic medicines in the interest of public health is
+                    expected within the objective of making accessible, safe, effective and quality medicines to the
+                    people.
+                </p><br>
+                <a href="https://ngo.ayush.gov.in/" class="btn btn-primary">Apply here</a>
+            </div>
+        </div>
+    </div>
+
+
+        <div id="contact" style="background-color: rgb(255, 255, 255);">
+            <div class="content">
+                <div class="left-side">
+                    <img id="logoid" src="logooo.png" alt="not found">
+                    <h3>आयुष मंत्रालय</h3>
+                    <h3>MINISTRY OF AYUSH</h3>
+                    <div class="address details">
+
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="topic">Address</div>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="text-one">Surkhet, NP12</div>
+                        <div class="text-two">Birendranagar 06</div>
+                    </div>
+                    <div class="phone details">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="topic">Phone</div> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="text-one">+0098 9893 5647</div>
+                        <div class="text-two">+0096 3434 5678</div>
+                    </div>
+                    <div class="email details">
+                        <i class="fas fa-envelope"></i>
+                        <div class="topic">Email</div>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="text-one">codinglab@gmail.com</div>
+                        <div class="text-two">info.codinglab@gmail.com</div>
+                    </div>
+
+
+
+                </div>
+                <div class="right-side">
+                    <div class="topic-text">Send us a message</div>
+                    <p>If you have any work from me or any types of queries related to my tutorial, you can send me a
+                        message from here. It's my pleasure to help you.</p>
+                    <form action="#">
+                        <div class="input-box">
+                            <input type="text" placeholder="Enter your name">
+                        </div>
+                        <div class="input-box">
+                            <input type="text" placeholder="Enter your email">
+                        </div>
+                        <div class="input-box message-box">
+                            <textarea placeholder="Your message here"></textarea>
+                        </div>
+                        <div class="button">
+                            <input type="button" value="Send Now">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- <div class=”footer-bottom” style=" background-color:rgb(255, 98, 0);
+        width: 100vw;
+        
+        padding-bottom: 20px;
+        text-align: center;">
+                <a href="https://www.facebook.com/moayush/" class="fa fa-facebook" target="_blank"></a>
+                <a href="https://twitter.com/moayush?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                    class="fa fa-twitter" target="_blank"></a>
+                <a href="https://www.youtube.com/channel/UCqRR2gs-I3zrNcE4so4TpgQ" class="fa fa-youtube"
+                    target="_blank"></a>
+                <a href="https://www.instagram.com/ministryofayush/?hl=en" class="fa fa-instagram" target="_blank"></a>
+            </div>
+        </div>
+    </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+
+        </script>
+    <script>
+        let currentScale = 1;
+
+        function zoomIn() {
+            currentScale += 0.1;
+            applyZoom();
+        }
+
+        function zoomOut() {
+            currentScale -= 0.1;
+            applyZoom();
+        }
+
+        function applyZoom() {
+            document.body.style.transform = `scale(${currentScale})`;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: whitesmoke;
+            text-align: center;
+            margin-top: 100px;
+            color: white;
+            /* Added text color */
+        }
+
+        .form-container {
+            max-width: 400px;
+            max-height: 1500px;
+            height: 500px;
+            margin: 0 auto;
+            background-color: navy;
+            padding: 20px;
+            border-radius: 40px;
+            border-color: blue;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .button-group {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 400px;
+            background-color: #c2b3db;
+            color: white;
+            /* Changed text color */
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button[type="reset"] {
+            background-color: #c2b3db;
+        }
+
+        .signup-link {
+            font-size: 14px;
+            text-align: center;
+            color: white;
+        }
+
+        a {
+            color: white;
+        }
+    </style>
+    <!-- <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            var showButton = document.getElementById("showButton");
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                showButton.src = "https://img.icons8.com/material-sharp/24/000000/visible.png"; // Visible icon
+            } else {
+                passwordField.type = "password";
+                showButton.src = "https://img.icons8.com/material-outlined/24/000000/invisible.png"; // Invisible icon
+            }
+        }
+    </script> -->
+</head>
+
+<body>
+
+    <div class="form-container">
+        <img src="https://tennews.in/wp-content/uploads/2020/09/Ministry-of-AYUSH-logo.jpg" alt="Ayurvedic Logo"
+            style="width: 100px; height: 100px;">
+        <h1>Login</h1>
+        <form action="/submit" method="post">
+            <div class="form-group">
+                <label for="userid">User ID</label>
+                <input type="text" id="userid" name="userid" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div style="position: relative;">
+                    <input type="password" id="password" name="password" required>
+                    <img src="https://img.icons8.com/material-outlined/24/000000/invisible.png" id="showButton"
+                        onclick="togglePassword()" alt="Show Password"
+                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                </div>
+            </div><br><br>
+            <div class="button-group">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div><br><br>
+            <div class="signup-link">
+                Don't have an account? <a href="registration">Sign up here</a>.
+            </div>
+            <br>
+            <DIV class="forgot-password">
+                <a href="#">Forgot Password</a>
+
+            </DIV>
+        </form>
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+
